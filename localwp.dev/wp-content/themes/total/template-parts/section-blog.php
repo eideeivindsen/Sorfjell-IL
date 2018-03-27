@@ -24,7 +24,7 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 		<?php } ?>
 
 		<div class="ht-blog-wrap ht-clearfix">
-		<?php 
+		<?php
 			$total_blog_post_count = get_theme_mod('total_blog_post_count', 3 );
 			$total_blog_cat_exclude = get_theme_mod('total_blog_cat_exclude');
             $total_blog_cat_exclude = explode(',', $total_blog_cat_exclude);
@@ -39,9 +39,9 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 				$total_image = wp_get_attachment_image_src(get_post_thumbnail_id() , 'total-blog-thumb');
 				?>
 				<div class="ht-blog-post ht-clearfix">
-					<?php 
+					<?php
 					if(has_post_thumbnail()){
-					?> 
+					?>
 						<div class="ht-blog-thumbnail">
 							<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($total_image[0]) ?>" alt="<?php the_title(); ?>"></a>
 						</div>
@@ -51,7 +51,7 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 					<div class="ht-blog-excerpt">
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					<div class="ht-blog-date"><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></div>
-						<?php 
+						<?php
 						if(has_excerpt()){
 							echo get_the_excerpt();
 						}else{
@@ -61,7 +61,7 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 					</div>
 
 					<div class="ht-blog-read-more">
-						<a href="<?php the_permalink(); ?>"><?php _e('Read More', 'total'); ?></a>
+						<a href="<?php the_permalink(); ?>"><?php _e('Les mer', 'total'); ?></a>
 					</div>
 				</div>
 				<?php
@@ -69,7 +69,7 @@ if(get_theme_mod('total_blog_section_disable') != 'on' ){ ?>
 			endif;
 			wp_reset_postdata();
 		?>
-		</div>	
+		</div>
 	</div>
 </section>
 <?php }

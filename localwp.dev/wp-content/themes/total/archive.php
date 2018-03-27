@@ -10,13 +10,13 @@
 get_header(); ?>
 
 <header class="ht-main-header">
-	<div class="ht-container">
+	<!-- <div class="ht-container">
 		<?php
 			the_archive_title( '<h1 class="ht-main-title">', '</h1>' );
 			the_archive_description( '<div class="taxonomy-description">', '</div>' );
 		?>
 		<?php do_action( 'total_breadcrumbs' ); ?>
-	</div>
+	</div> -->
 </header><!-- .ht-main-header -->
 
 <div class="ht-container">
@@ -40,12 +40,12 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php 
+			<?php
             the_posts_pagination( array(
 			    'prev_text' => __( 'Prev', 'total' ),
 			    'next_text' => __( 'Next', 'total' ),
 				)
-            ); 
+            );
             ?>
 
 		<?php else : ?>

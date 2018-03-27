@@ -13,7 +13,7 @@ if(get_theme_mod('total_service_section_disable') != 'on' ){ ?>
 			$total_service_title = get_theme_mod('total_service_title');
 			$total_service_sub_title = get_theme_mod('total_service_sub_title');
 			?>
-			<?php 
+			<?php
 			if($total_service_title || $total_service_sub_title){
 			?>
 				<div class="ht-section-title-tagline">
@@ -28,11 +28,11 @@ if(get_theme_mod('total_service_section_disable') != 'on' ){ ?>
 			<?php } ?>
 
 			<div class="ht-service-post-wrap">
-				<?php 
+				<?php
 				for( $i = 1; $i < 7; $i++ ){
-					$total_service_page_id = get_theme_mod('total_service_page'.$i); 
+					$total_service_page_id = get_theme_mod('total_service_page'.$i);
 					$total_service_page_icon = get_theme_mod('total_service_page_icon'.$i);
-				
+
 					if($total_service_page_id){
 						$args = array( 'page_id' => absint($total_service_page_id) );
 						$query = new WP_Query($args);
@@ -44,7 +44,7 @@ if(get_theme_mod('total_service_section_disable') != 'on' ){ ?>
 								<div class="ht-service-excerpt">
 									<h5><?php the_title(); ?></h5>
 									<div class="ht-service-text">
-									<?php 
+									<?php
 										if(has_excerpt()){
 											echo get_the_excerpt();
 										}else{
@@ -52,13 +52,13 @@ if(get_theme_mod('total_service_section_disable') != 'on' ){ ?>
 										}
 									 ?>
 									 <br/>
-									 <a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'total' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+									 <a href="<?php the_permalink(); ?>"><?php _e( 'Les mer', 'total' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 									 </div>
 								</div>
 							</div>
 						<?php
 						endwhile;
-						endif;	
+						endif;
 						wp_reset_postdata();
 					}
 				}

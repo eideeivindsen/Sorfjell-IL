@@ -19,8 +19,7 @@
 	</div><!-- .entry-content -->
 
 	<div class="entry-readmore">
-		<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'total' ); ?></a>
+		<a href="<?php the_permalink(); ?>"><?php _e( 'Les mer', 'total' ); ?></a>
 	</div>
 
 </article><!-- #post-## -->
-
